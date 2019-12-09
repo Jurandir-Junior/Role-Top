@@ -1,0 +1,66 @@
+﻿@model RoleTopMVC.ViewModels.BaseViewModel
+@{
+    var nomeView = (string) ViewData["NomeView"];
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="~/css/style-nav.css">
+    </head>  
+    <body>        
+    <header>
+            <section id="logo-area">
+                    <div class="topo">
+                        <ul>
+                            @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                            {
+                            <li class="bem-vindo">Bem-vindo(a)</li>
+                            } else
+                            {
+                                <li class="bem-vindo">Bem-vindo(a) @Model.UsuarioNome</li>
+                            }
+                            <li class="logon">
+                                <ul id="cadastro">
+                                    @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                                    {
+                                        <li><a asp-controller="Cadastro" asp-action="Index" class="button7">Cadastro</a></li>
+                                        <li id="login"><a asp-controller="Cliente" asp-action="Login" class="button8">Login</a></li>
+                                    } else 
+                                    {
+                                        <li><a asp-controller="Cliente" asp-action="Historico" class="button7">Historico</a></li>
+                                        <li id="login"><a asp-controller="Cliente" asp-action="Logoff" class="button8">Logoff</a></li>
+                                    }
+                                </ul>
+                            </li>
+                                    
+                        </ul>            
+                        <img id="logo" src="~/img/logo.png" title="Logo Rolê Top">
+                    </div>            
+                </section>
+        <nav>
+            <ul id="buttons">
+                <li><a asp-controller="Home" asp-action="Index" class="button1">Início</a></li>
+                <li><a asp-controller="Local" asp-action="Index" class="button2">O Local</a></li>
+                <li><a asp-controller="Pedido" asp-action="Index" class="button3">Crie seu evento</a></li>
+                <li><a asp-controller="Eventos" asp-action="Index" class="button4">Eventos Feitos</a></li>
+                <li><a asp-controller="Calendario" asp-action="Index" class="button5">Calendário</a></li>
+                <li><a asp-controller="Contato" asp-action="Index" class="button6">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+@RenderBody()
+    <footer>
+        <div class="section-container">
+            <address>
+                Avenida de Limeira, 539 - Campos Elíseos - SP
+                <br />
+                roletopeventos@gmail.com
+            </address>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;    
+    background-color: #21003F;
+}
+
+html {
+    height: 100%;
+}
+
+main{
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+h2{
+    height: 400px;
+    padding: 250px 0 0 0;
+}
+
+footer{
+    text-align: center;
+    background-color: #21003F;
+    color: white;
+}
+
+a{
+    padding: 2px;
+    color: white;
+    background-color: #F38D18;
+    text-decoration: none;
+}
+

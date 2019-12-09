@@ -1,0 +1,25 @@
+<head>
+    <title>Login - Rolê Top</title>
+    <link rel="stylesheet" type="text/css" href="~/css/style-login.css">
+</head>
+<main>
+    <section id="menus">
+        <br/>
+        <h2>Login</h2>
+        <form method="POST" action='@Url.Action("Login", "Cliente")'>
+            <div id="lista">
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="text" name="email">
+        </div>
+
+        <div>
+            <label for="senha">Senha</label>
+            <input id="senha" type="password" name="senha">
+        </div>
+            
+        <input type="submit" value="Entrar!" />
+        </div>
+        </form>
+    </section>
+</main>

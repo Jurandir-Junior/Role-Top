@@ -1,0 +1,66 @@
+@model RoleTopMVC.ViewModels.PedidoViewModel
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crie seu Evento - Rolê Top</title>
+    <link rel="stylesheet" type="text/css" href="css/style-criarevento.css">
+</head>
+<body>
+    <main>
+        <section id="menus">
+            <br />
+            <h2>Crie seu Evento</h2>
+            <form method="POST" action='@Url.Action("Registrar", "Pedido")'>
+                <br />
+                <div id="lista">
+                    <div>
+                        <label for="nome">Nome Completo</label>
+                        <input id="nomeCompleto" type="text" name="nome" minlength="3" required/>
+                    </div>
+                    <div>
+                        <label for="telefone">Telefone</label>
+                        <input id="telefone" type="tel" placeholder="11 91234-5678" name="telefone"/>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" type="text" placeholder="email@email.com" name="email" required/>
+                    </div>
+                    <div>
+                        <label for="nomeEvento">Nome do Evento </label>
+                        <input id="nome" type="text" name="nomeEvento" minlength="3" required/>
+                    </div>
+                    <div>
+                        <label for="tipoEvento">Tipo de Evento</label>
+                        <select id="tipo" name="tipoEvento" required>
+                            <option value="" disabled selected>Selecione</option>
+                            @foreach (var evento in @Model.Eventos)
+                            {
+                                <option value=@evento.TipoEvento>@evento.TipoEvento</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="dataevento">
+                        <div>
+                        <label for="data">Data</label>
+                        <input id="data" type="datetime-local" name="dia" required/>
+                        </div>
+                    </div>
+                    
+                    <div class="horaevento">
+                        <div>
+                            <label for="horaFim">às</label>
+                            <input id="hora2" type="datetime-local" name="horaFim" required/>
+                        </div>
+                    </div>                    
+                    
+                    <input type="submit" value="Enviar"/>
+                </div>
+            
+            </form>
+        </section>
+    </main>
+</body>
+</html>

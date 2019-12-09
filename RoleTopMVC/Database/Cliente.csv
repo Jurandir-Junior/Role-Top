@@ -1,0 +1,4 @@
+tipo_usuario=1;nome=Administrador;senha=admin;email=admin@email.com;cpf=12345678901;endereco=a;telefone=11 8765-4321;data_nascimento=31/12/1970 00:00:00
+tipo_usuario=0;nome=Junior;senha=123456;email=juno@email.com;cpf=51855643855;endereco=Rua Um;telefone=11 1234-5678;data_nascimento=26/01/1999 00:00:00
+tipo_usuario=0;nome=Volpi;senha=123456;email=volpi@email.com;cpf=12345678955;endereco=Rua Dois;telefone=11 1234-5678;data_nascimento=25/07/1974 00:00:00
+tipo_usuario=0;nome=Alex;senha=123456;email=waifu@email.com;cpf=98765432155;endereco=Rua Três;telefone=11 8765-4321;data_nascimento=10/03/1998 00:00:00

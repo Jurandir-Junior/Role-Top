@@ -1,0 +1,42 @@
+@model RoleTopMVC.ViewModels.HistoricoViewModel
+@{
+    ViewData["Title"] = "Pedidos - RoleTop";
+    ViewData["H2"] = "Histórico de Pedidos";
+}
+<head>
+    <link href="~/css/style-dashboard.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <main>
+        <h2>@ViewData["H2"]</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Evento</th>
+                    <th>Tipo</th>
+                    <th>Início</th>
+                    <th>Fim</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="5">
+                        <p>Pedidos atualizados em @DateTime.Now</p>
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                @foreach(var pedido in Model.Pedidos){
+                    <tr>
+                        <td>@pedido.DataDoPedido</td>
+                        <td>@pedido.Evento.NomeEvento</td>
+                        <td>@pedido.Evento.TipoEvento</td>
+                        <td>@pedido.Evento.Dia</td>
+                        <td>@pedido.Evento.HoraFim</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </main>
+</body>
