@@ -18,15 +18,15 @@
                 <div id="lista">
                     <div>
                         <label for="nome">Nome Completo</label>
-                        <input id="nomeCompleto" type="text" name="nome" minlength="3" required/>
+                        <input id="nomeCompleto" type="text" value="@Model.Cliente.Nome" name="nome" minlength="3" required/>
                     </div>
                     <div>
                         <label for="telefone">Telefone</label>
-                        <input id="telefone" type="tel" placeholder="11 91234-5678" name="telefone"/>
+                        <input id="telefone" type="tel" placeholder="11 91234-5678" value="@Model.Cliente.Telefone" name="telefone"/>
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input id="email" type="text" placeholder="email@email.com" name="email" required/>
+                        <input id="email" type="text" placeholder="email@email.com" value="@Model.Cliente.Email" name="email" required/>
                     </div>
                     <div>
                         <label for="nomeEvento">Nome do Evento </label>
